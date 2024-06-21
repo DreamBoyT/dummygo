@@ -1,0 +1,317 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Split screen layout */
+.flex {
+  display: flex;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Theme toggle switch */
+.theme-toggle-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-checkbox {
+  --toggle-size: 13px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 6.25em;
+  height: 3.125em;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+/* Input and button styles */
+.input-style {
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  color: #666;
+  background-color: #fff;
+  width: 100%;
+  outline: none;
+}
+
+.button-style {
+  background-color: #eee;
+  color: #111;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button-style:hover {
+  background-color: #ddd;
+}
+
+.button-style.active {
+  background-color: #666;
+  color: #fff;
+}
+
+/* Button group adjustments */
+.flex.flex-row .button-style,
+.flex.flex-col .button-style {
+  flex: 1;
+  width: auto; /* Adjust to allow buttons to size dynamically */
+}
+
+.flex.gap-2 > * {
+  flex: 1;
+}
+
+.flex.flex-col .button-style {
+  margin-bottom: 0.5rem;
+}
+
+.flex.flex-row .button-style {
+  flex: 1;
+}
+
+/* Dark mode adjustments */
+.dark .input-style {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.dark .button-style {
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+.dark .button-style:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark .text-gray-600 {
+  color: #e0e0e0;
+}
+
+.dark .bg-white {
+  background-color: #1e1e1e;
+}
+
+.dark .text-gray-500 {
+  color: #bbb;
+}
+
+/* Loading spinner */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Grid adjustments */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* Regenerate icon */
+.fa-redo-alt {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.fa-redo-alt:hover {
+  transform: scale(1.1);
+}
+
+/* Carousel icon */
+.carousel-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Image card adjustments */
+#imageCard .rounded-lg {
+  border-radius: 0.5rem;
+}
+
+#imageCard .shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#imageCard .w-full {
+  width: 100%;
+}
+
+#imageCard .h-auto {
+  height: auto;
+}
+
+/* Grid adjustments */
+#imageCard .grid {
+  display: grid;
+}
+
+#imageCard .grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+#imageCard .md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#imageCard .lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#imageCard .gap-4 {
+  gap: 1rem;
+}
+
+/* Add your existing styles here */
+
+/* Styling for swiper navigation buttons */
+.right-content .swiper-button-prev,
+.right-content .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.right-content .swiper-button-prev:hover,
+.right-content .swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.right-content .swiper-button-prev {
+  left: 10px;
+}
+
+.right-content .swiper-button-next {
+  right: 10px;
+}
+
+/* Ensure the navigation buttons are on top of the images */
+.swiper-container {
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  border-radius: 10px;
+}
